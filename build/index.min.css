@@ -1,0 +1,81 @@
+@import "//fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap";
+
+/* sass:/Users/kenfrederick/Google Drive/Development/web/apps/norns-txt-json-orca/src/index.scss */
+:root {
+  --black: #000;
+  --white: #fff;
+  --background-lua: #9fe;
+  --background-json: #7ec;
+  --font-family: "IBM Plex Mono", monospace;
+}
+body {
+  font-family: var(--font-family);
+  font-size: 14px;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+}
+.button {
+  appearance: none;
+  background-color: var(--white);
+  border: 0;
+  color: var(--black);
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 0;
+  height: 2em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+.button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.input__container {
+  box-sizing: border-box;
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 33.33%;
+}
+.input__txt,
+.input__json,
+.input__lua {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  overflow: scroll;
+  padding: 1em;
+  padding-top: 3em;
+  white-space: pre-wrap;
+}
+.input__txt::before,
+.input__json::before,
+.input__lua::before {
+  position: absolute;
+  top: 1em;
+}
+.input__txt {
+  background-color: var(--black);
+  color: var(--white);
+}
+.input__txt::before {
+  content: ".txt data\a\a";
+}
+.input__json {
+  background-color: var(--background-json);
+  color: var(--black);
+}
+.input__json::before {
+  content: ".json data\a\a";
+}
+.input__lua {
+  background-color: var(--background-lua);
+  color: var(--black);
+}
+.input__lua::before {
+  content: ".orca/lua data\a\a";
+}
